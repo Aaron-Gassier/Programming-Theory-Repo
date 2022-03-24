@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class EnemySlow : Enemy
 {
     void Update()
@@ -20,6 +21,8 @@ public class EnemySlow : Enemy
             GameOver();
         }
     }
+
+    // POLUMORPHISM
     private new void Move()
     {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;

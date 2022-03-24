@@ -10,6 +10,12 @@ public class Player : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
     private int alive = 1;
+    // ENCAPSULATION
+    public int playerAlive 
+    {
+        get { return alive; }
+        set { alive = value; }
+    }
 
 
     
@@ -34,6 +40,7 @@ public class Player : MonoBehaviour
         }
     }
    
+    // ABSTRACTION
     private void Move()
     {
         verticalInput = Input.GetAxis("Vertical");
