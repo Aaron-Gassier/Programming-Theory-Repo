@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -40,8 +41,9 @@ public class Enemy : MonoBehaviour
 
     protected void GameOver()
     {
-        Debug.Log("Game Over you survived: " + seconds + "seconds");
+        Debug.Log("Game Over you survived: " + seconds + " seconds");
         Destroy(gameObject);
+        SceneManager.LoadScene("Menu");
     }
 
     protected void AddSpeed()
